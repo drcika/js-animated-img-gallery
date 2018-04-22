@@ -4,21 +4,33 @@
 <head>
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>js vanilla img gallery</title>
+  <title>js img gallery</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" type="text/css" media="screen" href="css.css" />
 </head>
 
 <body>
-  <div class="contener text-center" id="main">
-    <div id="nav"></div>
-  </div>
+  <div id="gallery" class="gallery">
+    <ul id="galleryList" class="subnav"></ul>
+  
   <div id="thumbContainer">
     <div id="thumbScroller">
-      <div id="proba" class="container"></div>
     </div>
   </div>
+  <div id="scrollWrapper" class="scrollWrapper">
+    <span id="prev_thumb" class="prev_thumb"></span>
+    <div id="slider" class="slider"></div>
+    <span id="next_thumb" class="next_thumb"></span>
+  </div>
+
+  <div id="overlay" class="overlay"></div>
+  <div id="loading" class="loading"></div>
+  <div id="next" class="next"></div>
+  <div id="prev" class="prev"></div>
+  <div id="close" class="close"></div>
+</div>
+  <script type="text/javascript" src="jquery.min.js"></script>
+  <script type="text/javascript" src="jquery-ui.min.js"></script>
   <script type="text/javascript" src="app.js"></script>
 </body>
 
