@@ -15,18 +15,21 @@ xhr.onload = function() {
   for (let i = 0; i < links.length; i++) {
     links[i].addEventListener('click', function(e) {
       proba(i);
-
     })
   }
 
   function proba(i) {
     var img = gallerys.gall[i];
-    var displayGall = `<div>`
+    var displayGall = ``;
     for (let j = 0; j < img.galImg.length; j++) {
-      displayGall += `<img src="${img.galImg[j]}">`;
+      displayGall += `<div class="content"><div><a href="#"><img src="${img.galImg[j]}" class="thumb"/></a></div></div>`;
     }
-    displayGall += `</div>`
-    document.getElementById("thumbContainer").innerHTML = displayGall;
+    document.getElementById("proba").innerHTML = displayGall;
+    var images = document.querySelectorAll('.content');
+    var nmb_images = document.querySelectorAll('.content').length; //total number of images
+    var center = window.innerWidth / 2; //center of screen
+    var thumbScroller = document.getElementById('thumbScroller');
+    thumbScroller.scrollLeft = 1000;
   }
 }
 xhr.send();
